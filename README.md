@@ -1,1 +1,1 @@
-# Vite + MSW + GraphQL
+# Vitest + MSW + GraphQL
