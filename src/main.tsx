@@ -3,9 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import { client } from './ApplloClient.ts';
+import { worker } from './mocks/browser';
 
 if (process.env.NODE_ENV === 'development') {
-  const { worker } = await import('./mocks/browser');
   worker.start();
 }
 

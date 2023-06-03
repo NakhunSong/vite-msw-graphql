@@ -1,5 +1,5 @@
 import { gql, useMutation } from '@apollo/client';
-import { ChangeEventHandler, useState } from 'react';
+import { ChangeEventHandler, FormEventHandler, useState } from 'react';
 
 const LOG_IN = gql`
   mutation Login($username: String!) {
@@ -21,7 +21,9 @@ function App() {
     setUsername(event.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit: FormEventHandler = (e) => {
+    e.preventDefault();
+
     logIn({
       variables: {
         username,
@@ -38,11 +40,7 @@ function App() {
   }
 
   if (data) {
-    return (
-      <p>
-        username: <a>{data.user.username}</a>
-      </p>
-    );
+    return <span data-testid="username">{data.user.username}</span>;
   }
 
   return (
