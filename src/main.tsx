@@ -1,9 +1,9 @@
 import { ApolloProvider } from '@apollo/client';
+import { worker } from '@mocks/browser.ts';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import { client } from './ApplloClient.ts';
-import { worker } from './mocks/browser';
 
 if (process.env.NODE_ENV === 'development') {
   worker.start();

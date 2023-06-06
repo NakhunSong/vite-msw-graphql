@@ -1,6 +1,6 @@
+import { render, screen, userEvent } from '@utils/test-utils';
 import { expect, test } from 'vitest';
 import App from './App';
-import { render, screen, userEvent } from './utils/test-utils';
 
 test('renders the form', async () => {
   render(<App />);
