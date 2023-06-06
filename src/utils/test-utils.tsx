@@ -1,11 +1,12 @@
-import { ApolloProvider } from '@apollo/client';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render } from '@testing-library/react';
-import { client } from '../ApplloClient';
+
+const queryClient = new QueryClient();
 
 function customRender(ui: React.ReactElement, options = {}) {
   return render(ui, {
     wrapper: ({ children }) => (
-      <ApolloProvider client={client}>{children}</ApolloProvider>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     ),
     ...options,
   });

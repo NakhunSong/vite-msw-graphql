@@ -1,9 +1,9 @@
 import { render, screen, userEvent } from '@utils/test-utils';
 import { expect, test } from 'vitest';
-import App from './App';
+import Form from './Form';
 
 test('renders the form', async () => {
-  render(<App />);
+  render(<Form />);
 
   /** change input value and then submit it */
   const input = screen.getByLabelText(/username/i);

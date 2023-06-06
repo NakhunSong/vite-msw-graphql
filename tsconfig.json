@@ -22,6 +22,9 @@
     /* Alias */
     "baseUrl": ".",
     "paths": {
+      "@api/*": ["src/api/*"],
+      "@components/*": ["src/components/*"],
+      "@gql/*": ["src/gql/*"],
       "@mocks/*": ["src/mocks/*"],
       "@utils/*": ["src/utils/*"]
     }
